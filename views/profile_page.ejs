@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>User Profile</title>
+<link rel="stylesheet" href="/static/css/about_style.css">
+<link rel="stylesheet" href="/static/css/profile_signup_style.css">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900
+&display=swap" rel="stylesheet">	
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<h1 align=center class=intro><b style="color:#2D7D9A;">Profile</b></h1>
+	
+	<table class="profile_table">
+	<tr>
+		<td><b>First Name: </b></td>
+		<td>
+			<%= user.first_name %>
+		</td>
+	</tr>
+
+	<tr>
+		<td><b>Last Name: </b></td>
+		<td>
+            <%= user.last_name %>
+		</td>
+	</tr>
+	
+
+	<tr>
+		<td><b>Email: </b></td>
+		<td>
+            <%= user.email %>
+		</td>
+	</tr>
+
+	<tr>
+		<td><b>Mobile: </b></td>
+		<td>
+            <%= user.mobile %>
+		</td>
+	</tr>
+
+	<tr>
+	    <td colspan=2 style="text-align:center;"></td>
+	</tr>
+
+	<tr>
+		<td><b>Username: </b></td>
+		<td>
+            <%= user.username %>
+		</td>
+	</tr>
+
+	<tr>
+		<td><b>Password:</b> </td>
+		<td>
+		<input type=password id=pass style="background-color: #e0ece4;"value=
+		<%= user.pass %>
+		</td>
+	</tr>
+	
+	<tr>
+		<td></td>
+		
+		<td><input align=right type="checkbox" onclick="myFunction()" style="zoom: 1.4;" >Show Password</td>
+		
+	</tr>
+
+	</table>
+	
+	<h1 class=about_heading align=left>
+        <a href="/dashboard" class="return_button">Return</a> 
+    </h1>
+
+</body>
+<script>
+	function myFunction() {
+  		var x = document.getElementById("pass");
+  		if (x.type == "password") {
+    		x.type = "text";
+  		}else {
+   	 	x.type = "password";
+  		}
+	}
+</script>
+</html>

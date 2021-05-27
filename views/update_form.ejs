@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Update Notes</title>
+<link rel="stylesheet" href="/static/css/add_update_form.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&
+display=swap" rel="stylesheet">
+</head>
+
+<body>
+<% var old_note = locals.old_note %>
+
+<h1 align="center">Update Your Notes</h1>
+
+<div class="input_area">
+
+<form action="/update" method=POST>
+
+<input type=hidden name="id" value="<%= old_note.id %>"> 
+
+<input class="title" type=text name="title" placeholder="Title" value="<%= old_note.title %>"  autofocus required>
+<br>
+
+<textarea name="notes" rows="11" placeholder="Add Your Notes Here" 
+	required style="resize: vertical;"><%= old_note.notes %></textarea>
+<br>
+
+<select name="status">    
+	<%= generateOptions() %>
+</select>
+<br>
+
+
+<input class="update_notes" type=submit value="UPDATE NOTES">
+
+</form>
+</div>
+
+<br>
+<br>
+
+</table>
+</body>
+</html>
+
+
+<% function generateOptions(){ %>
+    <% if(old_note.status == "PENDING"){ %>
+            <option value="PENDING" selected>PENDING</option>
+            <option value="COMPLETED">COMPLETED</option>
+            <option value="IN-PROGRESS">IN-PROGRESS</option>
+            <option value="SKIPPED">SKIPPED</option>
+    <% }else if(old_note.status == "COMPLETED"){ %>
+            <option value="PENDING">PENDING</option>
+            <option value="COMPLETED" selected>COMPLETED</option>
+            <option value="IN-PROGRESS">IN-PROGRESS</option>
+            <option value="SKIPPED">SKIPPED</option>
+    <% }else if(old_note.status == "IN-PROGRESS"){ %>
+            <option value="PENDING">PENDING</option>
+            <option value="COMPLETED">COMPLETED</option>
+            <option value="IN-PROGRESS" selected>IN-PROGRESS</option>
+            <option value="SKIPPED">SKIPPED</option>
+    <% }else if(old_note.status == "SKIPPED"){ %>
+            <option value="PENDING">PENDING</option>
+            <option value="COMPLETED">COMPLETED</option>
+            <option value="IN-PROGRESS">IN-PROGRESS</option>
+            <option value="SKIPPED" selected>SKIPPED</option>
+    <% }else{ %>
+            <option value="PENDING">PENDING</option>
+            <option value="COMPLETED">COMPLETED</option>
+            <option value="IN-PROGRESS">IN-PROGRESS</option>
+            <option value="SKIPPED">SKIPPED</option>
+     <% } %>
+<% } %>
