@@ -6,6 +6,7 @@ const session = require('express-session');
 
 const app = express();
 
+const port = process.env.PORT || 5000;
 
 app.set('view engine', 'ejs');
 
@@ -30,5 +31,5 @@ app.get('/', (req, res) => {
     }
     res.render('signin', {useragent});
 })
-var port = server.listen(process.env.PORT || 3000);
+
 app.listen(port, ()=>{console.log('Listening')});
