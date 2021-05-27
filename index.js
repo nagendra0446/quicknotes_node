@@ -6,7 +6,7 @@ const session = require('express-session');
 
 const app = express();
 
-const port = 5000;
+const port = process.env.port | 5000;
 
 app.set('view engine', 'ejs');
 
