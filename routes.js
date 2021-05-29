@@ -1,15 +1,15 @@
 const express = require('express');
 const route = express.Router();
 const useragent = require('express-useragent');
-
 const mongoose = require('mongoose');
 const app_user = require('./models/app_user');
 const note = require('./models/note');
-
 const url = 'mongodb+srv://naguser:naguser123@cluster0.8rb3w.mongodb.net/quicknotes_db?retryWrites=true&w=majority';
+
 mongoose.connect(url, { useNewUrlParser: true })
+
 const db = mongoose.connection
-db.once('open', _ => {
+db.once('open', () => {
   console.log('Database connected:', url)
 })
 

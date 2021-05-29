@@ -13,7 +13,7 @@ app.set('view engine', 'ejs');
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-// app.use(useragent.express());
+app.use(useragent.express());
 app.use('/static', express.static(path.join(__dirname, 'public')));
 app.use(session({
     secret: 'secret key',
