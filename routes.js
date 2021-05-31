@@ -23,7 +23,7 @@ route.post('/', (req, res) => {
         return;
     } */
 
-    var uname = req.body.uname;
+    var uname = req.body.uname.toLowerCase();
     var pass = req.body.pass;
     app_user.findOne({username: uname, pass: pass}, function (err, result) {
         
@@ -170,7 +170,16 @@ route.get('/delete', (req, res) => {
 });
 
 route.get('/signup', (req, res) => {
-    res.render('signup_form');
+    app_user.find({}, function (err, result) {
+        
+        if (err) return console.error(err);
+
+        if(result){
+            req.session.users = result;
+            res.render('signup_form', {req});
+        } 
+    }).select('username')
+    
 });
 
 route.post('/signup', (req, res) => {

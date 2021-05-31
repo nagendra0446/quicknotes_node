@@ -6,6 +6,16 @@ body
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+.user_err, .user_ok{
+	font-size: 16px;
+	background-color:#e0ece4;
+}
+.user_err{
+	color: red;
+}
+.user_ok{
+	color: green;
+}
 .intro
 {
 	font-weight:500;
@@ -36,7 +46,7 @@ form
 	font-size:20px;
 	border: none;
 }
-input,select,textarea
+input,select,textarea,a
 {
 	border: 1px solid black;
 	border-radius:3px;
@@ -47,6 +57,10 @@ input,select,textarea
 	font-weight:600;
 	border: none;
 	
+	
+}
+a{
+	text-decoration: none;
 }
 .input_area
 {

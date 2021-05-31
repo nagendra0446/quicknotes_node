@@ -7,9 +7,38 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&
 display=swap" rel="stylesheet">	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+	function checkUsers(){
+		var users = [];
+	 <% req.session.users.forEach(function(user){ %>
+		users.push("<%= user.username %>");
+	<% }) %> 
+		var username = document.getElementById("username").value.toLowerCase();
+		var ascii = username.charCodeAt(0)
+		 console.log(users.includes(username));
+		 if(username == ""){
+			 document.getElementById("user_message").innerHTML = "";
+		 }
+		 else if(ascii < 65 || ascii > 122 || (ascii > 90 && ascii < 97)){
+			document.getElementById("user_message").innerHTML = "<a class=user_err>Should start with letter</a>";
+		 	document.getElementById("submit_inp").disabled = true;
+		 }
+		 else if(users.includes(username)){
+			console.log(users);
+			document.getElementById("user_message").innerHTML = "<a class=user_err><b>"+username+"</b> is not available"+"</a>";
+			document.getElementById("submit_inp").disabled = true;
+		}
+		else{
+			document.getElementById("user_message").innerHTML = "<a class=user_ok><b>"+username+"</b> is available"+"</a>";
+			document.getElementById("submit_inp").disabled = false;
+		}
+	}
+	
+
+</script>
 </head>
 
-<h1 align=center class=intro>Sign Up to <b style="color:#2D7D9A;">Quick Notes.</b></h1>
+<h1 align=center class=intro style="margin: 15px;">Sign Up to <b style="color:#2D7D9A;">Quick Notes.</b></h1>
 
 	<form class="input_area" action="/signup" method=POST> <!-- onSubmit = "return checkStatus(this)"> -->
 		<table class="form_table">
@@ -34,7 +63,12 @@ display=swap" rel="stylesheet">	<meta name="viewport" content="width=device-widt
 			</tr>
 			<tr>
 				<td>Set Username: </td>
-				<td><input type=text name="uname" size="25" required></td>
+				<td><input id="username" autocomplete="off" type=text name="uname" size="25" required onkeyup="checkUsers()" ></td>
+				
+			</tr>
+			<tr>
+				<td></td>
+				<td id="user_message" style="background-color: #e0ece4"></td>
 			</tr>
 			<tr>
 				<td>Set Password: </td>
@@ -52,9 +86,11 @@ display=swap" rel="stylesheet">	<meta name="viewport" content="width=device-widt
 				</td>
 			</tr>
 			<tr>
-			<td colspan=2 style="text-align:center;">
-				<input class="add_notes" type=submit value="Sign Up">
-			</td>
+				<td colspan=2 style="text-align:center;">
+					<a class="add_notes" href="/">Back to Sign In</a>
+					&emsp;&emsp;
+					<input class="add_notes" id ="submit_inp" type=submit value="Sign Up">
+				</td>
 			</tr>
 		</table>	
 	</form>
