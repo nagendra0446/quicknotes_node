@@ -189,7 +189,7 @@ route.post('/signup', (req, res) => {
         last_name: req.body.last_name,
         email: req.body.email,
         mobile: req.body.mobile,
-        username: req.body.uname,
+        username: req.body.username,
         pass: req.body.pass,
     }
 
