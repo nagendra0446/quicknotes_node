@@ -25,11 +25,10 @@ if(!isset($_SESSION["username"]))
 <div class="input_area">
 <form action="/insert" method=POST>
 
-	<input class="title" type=text name="title" placeholder="Title" autofocus>
+	<input class="title" type=text name="title" placeholder="Title" autofocus required>
 	<br>
 
-	<textarea name="notes" rows="11" placeholder="Add Your Notes Here" 
-	required></textarea>
+	<textarea name="notes" rows="11" placeholder="Add Your Notes Here" required></textarea>
 	
 	Status: 
 	<select class="status" name="status">
@@ -40,7 +39,7 @@ if(!isset($_SESSION["username"]))
 	</select>
 	<br>
 
-	<input class="add_notes" type=submit value="ADD NOTES" onclick="this.disabled=true;">
+	<input class="add_notes" type=submit value="ADD NOTES">
 
 </form>
 </div>
