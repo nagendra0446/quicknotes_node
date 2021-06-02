@@ -30,11 +30,11 @@ app.listen(port, ()=>{console.log(`Server running on port ${port.toString()}`)})
 /* WRITING THE LOGIC FOR only get method of HOME PAGE */
 /* REMAINING ROUTES ARE IN routes.js*/
 
-/* app.get('/', (req, res) => {
+app.get('/', (req, res) => {
     if(req.session.username){
         res.redirect('/dashboard');
     }
     res.render('signin', {req});
-}) */
+})
 
 /* -------------------------------- */
