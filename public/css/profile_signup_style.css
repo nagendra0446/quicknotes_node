@@ -63,6 +63,15 @@ a{
 	font-size: 25px;
     font-weight: 600;
 }
+a.back_to_signin{
+	font-size: 20px;
+	font-family: inter;
+	background-color: #318fb5;
+	color:white;
+	font-weight: 600;
+	padding:5px;
+	margin-top:20px;
+}
 .input_area
 {
 	display:inline-block;
