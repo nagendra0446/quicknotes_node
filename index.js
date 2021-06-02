@@ -34,7 +34,7 @@ app.get('/', (req, res) => {
     if(req.session.username){
         res.redirect('/dashboard');
     }
-    res.render('signin', {useragent});
+    res.render('signin', {req});
 })
 
 /* -------------------------------- */

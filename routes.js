@@ -35,7 +35,7 @@ route.post('/', (req, res) => {
         } 
         else{
             req.session.msg = 'invalid_creds';
-            res.render('signin', {message: 'invalid_creds', useragent})
+            res.render('signin', {message: 'invalid_creds', req})
         }
     })
 })

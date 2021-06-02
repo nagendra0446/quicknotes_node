@@ -41,7 +41,6 @@ form
 	border: 1px solid black;
 	display: inline-block;
 	text-align:center;
-	padding:10px 20px 10px 10px;
 	border-radius:10px;
 	font-size:20px;
 	border: none;
@@ -53,14 +52,16 @@ input,select,textarea,a
 	padding:3px;
 	font-family: inter;
 	background-color: white;
-	font-size:25px;
-	font-weight:600;
+	font-size:20px;
+	font-weight:400;
 	border: none;
 	
 	
 }
 a{
 	text-decoration: none;
+	font-size: 25px;
+    font-weight: 600;
 }
 .input_area
 {
@@ -87,7 +88,7 @@ input:focus, textarea:focus, select:focus
 .profile_table
 {
 	display: inline-block;
-	padding:10px 20px 10px 10px;
+	padding:10px 10px 10px 50px;
 	line-height: 28px;
 	border-radius:10px;
 	font-size: 25px;

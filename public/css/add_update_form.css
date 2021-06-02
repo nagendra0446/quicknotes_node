@@ -4,6 +4,7 @@ body
 	text-align:center;
 	background-color: #e0ece4;
 }
+
 input:focus, textarea:focus, select:focus
 {
 	outline: none;
@@ -33,11 +34,14 @@ input,select,textarea
 	border: none;
 	
 }
+select{
+	font-size:16px;
+}
 h1
 {
 	font-family:inter;
 	font-weight:600;
-	font-size:35px;
+	font-size:30px;
 	margin: 25px;
 }
 .title
@@ -49,9 +53,10 @@ h1
 }
 .add_notes, .update_notes
 {
-	color:black;
+	color:white;
+	background-color: dodgerblue;
 	font-weight: bolder;
-	border: 2px solid black;
+	/* border: 2px solid black; */
 }
 textarea
 {

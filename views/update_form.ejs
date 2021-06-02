@@ -3,6 +3,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Update Notes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="/static/css/add_update_form.css">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&
@@ -12,7 +13,7 @@ display=swap" rel="stylesheet">
 <body>
 <% var old_note = locals.old_note %>
 
-<h1 align="center">Update Your Notes</h1>
+<h1 align=center>Update your <b style="color: #2d7d9a">Notes</b></h1>
 
 <div class="input_area">
 
@@ -26,14 +27,14 @@ display=swap" rel="stylesheet">
 <textarea name="notes" rows="11" placeholder="Add Your Notes Here" 
 	required style="resize: vertical;"><%= old_note.notes %></textarea>
 <br>
-
+Status:
 <select name="status">    
 	<%= generateOptions() %>
 </select>
 <br>
 
 
-<input class="update_notes" type=submit value="UPDATE NOTES">
+<input class="update_notes" type=submit value="UPDATE NOTES" onClick="this.form.submit(); this.disabled=true;">
 
 </form>
 </div>

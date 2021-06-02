@@ -51,11 +51,22 @@ td.title
 	color:#204051;
 	text-align: left;
 }
+td.title_mob
+{
+    font-size:20px;
+	width:120px;
+	font-weight: bold;
+	max-width:600px;
+	word-wrap: break-word;
+	color:#204051;
+	text-align: left;
+}
 td.status
 {
 	font-weight:500;
 	width:150px;
 	text-align:right;
+    font-size: 18px;
 }
 td.notes
 {

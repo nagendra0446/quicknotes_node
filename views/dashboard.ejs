@@ -12,7 +12,12 @@
 
 <h1 align=center> <b style="color: #2d7d9a">Quick Notes</b></h1>
 
-<div class=user_info_pc>
+	<% if (req.useragent.isMobile){ %>
+		<div class=user_info_mobile>
+    <% }else{ %>
+		<div class=user_info_pc>
+    <% } %> 
+
 	<img src="/static/images/user_icon.png" alt="" width=45px>
 	<br>
 	<%= req.session.username %>
@@ -37,14 +42,6 @@
 </table>
 </div>
 
-<!-- <?php
-    // Mobile view adjustments
-    require_once "libs/mobile_detect.php";
-    $detect = new Mobile_Detect;
-	if ($detect->isMobile())
-		echo "<hr width=90% class=line noshade>";
-?> -->
-
 <table class="add_area">
 	<tr>
 		<td class="add_area">
@@ -68,8 +65,12 @@
 
 <table class=note_model style="background-color: <%= getColor(count++) %>;">
     <tr>
-        <td class=title> <%= note.title %> </td>
-        <td class=status> <%= note.status %> </td>
+        <% if(req.useragent.isMobile){ %>
+            <td class=title_mob> <%= note.title %> </td>
+        <% }else{ %>
+            <td class=title> <%= note.title %> </td>
+        <% } %>
+        <td class=status> <i><%= note.status %><i></i> </td>
 
         <td rowspan=2 valign=middle class=edit_opt>
         <form action="/update_notes" method=post>

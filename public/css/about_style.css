@@ -6,7 +6,6 @@ body
 .header_tab
 {
     background-color: white;
-    width:100%;
 }
 .heading
 {
@@ -19,7 +18,7 @@ body
 {
    font-size: 25px;
    font-weight: 600;
-   padding-right: 15px;
+   /* padding-right: 15px; */
    cursor: pointer;
 }
 .about
@@ -29,7 +28,6 @@ body
 
 .cases_area
 {
-    width:100%;
     word-spacing: 10px;
 }
 
@@ -68,13 +66,13 @@ body
 .about_heading
 {
     margin: 20px;
-    font-size: 35px;
+    font-size: 32px;
     font-weight: 400;
-    text-align: justify;
 }
 .info
 {
     color: #892cdc;
+    font-size: 28px;
 }
 .return_button
 {
