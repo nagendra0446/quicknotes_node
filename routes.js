@@ -4,6 +4,18 @@ const useragent = require('express-useragent');
 const mongoose = require('mongoose');
 const app_user = require('./models/app_user');
 const note = require('./models/note');
+const url = 'mongodb+srv://naguser:naguser123@nagcluster.8rb3w.mongodb.net/quicknotes_db?retryWrites=true&w=majority';
+
+mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true})
+
+    const db = mongoose.connection
+    db.once('open', () => {
+        console.log('Database connected to', url)
+    })
+
+    db.on("error", function(err) {
+        console.log("Could not connect to the database!");
+    });
 
 
 // Make the idea of project code bkp ready and implementws
@@ -202,7 +214,6 @@ route.get('/logout', (req, res) => {
 });
 
 route.post('/logout', (req, res) => {
-    mongoose.disconnect();
     req.session.destroy();
     res.redirect('/');
 });
