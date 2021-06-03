@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Quick Notes Sign In</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900
+    &display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body>
+
+<h1 align=center class=intro>
+    Welcome to <br><b style="color:#2D7D9A;">
+    Quick Notes.</b><br> Sign in to get started
+</h1>
+
+<br>
+
+<div class=signin_box  align=center>
+	<form action="/" method=POST>
+		<div class=signin_head align="center">Sign in</div>
+ 		<input class=text_inp type=text name="uname" placeholder="Username" required>
+		<br>
+		<input class=text_inp type=password name="pass" placeholder="Password" required>
+		<br>
+		<input class=signin_button type=Submit value="Sign in" placeholder="Password">
+		<br>
+	</form>
+	<a class=forgot_link href="#">Forgot Password?</a>  
+		&nbsp;&nbsp;
+	<a class=signup_button href = "/signup">Sign Up</a>
+</div>
+
+<div class="loader-wrapper"></div>
+
+</body>
+
+
+
+<!-- LOAD BUTTON STUFF AND CSS -->
+<style>
+	
+	.loader-wrapper 
+	{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: #ffffff;
+		display:flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+  /* END of load_style.css*/
+	body
+	{
+		background-color:#f1f3f8;
+		font-family: inter;
+		text-align: center;
+		
+	}
+	.intro
+	{
+		font-family: inter;	
+		font-size:30px;
+		font-weight:500;
+		display: inline-block;
+	}
+	.intro_name
+	{
+		color:#2D7D9A;
+		font-size: 45px;
+		font-weight: 600;
+	}
+	.signin_box
+	{
+		background-color:white;
+		border: 1px solid #e1e4e8;
+		border-radius: 6px;
+		display:inline-block;
+		left:50%;
+		line-height:48px;
+		padding:15px;  
+	}
+	.signin_head, .text_inp, .signin_button, .signup_button, .forgot_link
+	{
+		font-size: 20px;
+		font-family: inter;
+	}
+	.signin_head
+	{
+		color:#2D7D9A;
+		font-size:30px;
+		margin-top: 5px;
+		margin-bottom: 15px;
+		font-weight:bold;
+	}
+	.text_inp
+	{
+		background-color:#f1f3f8 ;
+		border: 1px solid #c0c0c0;
+		border-radius:2px;
+		font-family: inter;
+		padding:4px;
+		width:300px;
+	}
+	.signin_button
+	{
+		background-color:#2d7d9a;
+		border: 0.01rem solid;
+		border-radius: 2px;
+		color:white;
+		font-family: inter;
+		margin-bottom:10px;
+		padding:5px;
+		width:310px;
+	}
+	.signup_button
+	{
+		background-color:white;
+		border: 0.01rem solid;
+		border-radius: 2px;
+		color:#2d7d9a;
+		padding:5px 10px;
+	}
+	.forgot_link
+	{
+		color:black;
+	}
+</style>
+<script>
+	$(window).on("load",function(){
+	  $(".loader-wrapper").fadeOut("slow");
+	});
+</script>
+
+</html>
