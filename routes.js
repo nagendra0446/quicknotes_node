@@ -4,7 +4,7 @@ const useragent = require('express-useragent');
 const mongoose = require('mongoose');
 const app_user = require('./models/app_user');
 const note = require('./models/note');
-const url = 'mongodb+srv://naguser:naguser123@nagcluster.8rb3w.mongodb.net/quicknotes_db?retryWrites=true&w=majority';
+
 
 // Make the idea of project code bkp ready and implementws
 // Console should display some useful info
@@ -14,16 +14,6 @@ route.post('/', (req, res) => {
         res.redirect('/dashboard');
         return;
     } */
-    mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true})
-
-    const db = mongoose.connection
-    db.once('open', () => {
-        console.log('Database connected to', url)
-    })
-
-    db.on("error", function(err) {
-        console.log("Could not connect to the database!");
-    });
 
     var uname = req.body.uname.toLowerCase();
     var pass = req.body.pass;
