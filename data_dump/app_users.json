@@ -1,0 +1,66 @@
+[{
+  "_id": {
+    "$oid": "60ae278f7db637a77a5e74e0"
+  },
+  "first_name": "Nagendra",
+  "last_name": "Nainala",
+  "email": "nnagendra0446@gmail.com",
+  "mobile": "7013489086",
+  "username": "nagendra0446",
+  "pass": "nag123"
+},{
+  "_id": {
+    "$oid": "60af268d92180e15e88247e0"
+  },
+  "first_name": "Akshay",
+  "last_name": "Reddy",
+  "email": "akshay0446@gmail.com",
+  "mobile": "98465262",
+  "username": "akshay0446",
+  "pass": "ak123",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60af4ee9c9e6bc3860b8e758"
+  },
+  "first_name": "Final",
+  "last_name": "New",
+  "email": "newemail@live.com",
+  "mobile": "7013489086",
+  "username": "finale",
+  "pass": "fin123",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60af79da088b18438837088b"
+  },
+  "first_name": "Test first name",
+  "last_name": "Test last name",
+  "email": "nag",
+  "mobile": "84512562",
+  "username": "nag",
+  "pass": "nag123",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60b2666e2b61e30015d04a4c"
+  },
+  "first_name": "Krishna",
+  "last_name": "Reddy",
+  "email": "krishnareddynv@gmail.com",
+  "mobile": "09440999777",
+  "username": "krishna",
+  "pass": "krishna123",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60b35821697b7d0015b4b3e2"
+  },
+  "first_name": "guest first name",
+  "last_name": "guest last name",
+  "email": "guestmail123@gmail.com",
+  "mobile": "135791113",
+  "username": "guest",
+  "pass": "guest",
+  "__v": 0
+}]

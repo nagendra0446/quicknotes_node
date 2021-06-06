@@ -1,0 +1,64 @@
+[{
+  "_id": {
+    "$oid": "60ae88fb90ee70124c05cc6a"
+  },
+  "user": "nagendra0446",
+  "title": "Node.js",
+  "status": "COMPLETED",
+  "notes": "One of my strangest, but exiciting experinces",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60af14e41e4039344831e4e5"
+  },
+  "user": "nagendra0446",
+  "title": "Buildling an API using node.js",
+  "status": "COMPLETED",
+  "notes": "API's are more efficient, secure and simple way of working with data.",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60af4f0fc9e6bc3860b8e759"
+  },
+  "user": "finale",
+  "title": "My Notes",
+  "status": "COMPLETED",
+  "notes": "These are my new notes",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60af9e7bc4790f0015440eb1"
+  },
+  "user": "nagendra0446",
+  "title": "New Notes created from TV",
+  "status": "PENDING",
+  "notes": "THESE ARE NY NEW NOTES CREATED FROM TV",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60af9f54c4790f0015440eb2"
+  },
+  "user": "akshay0446",
+  "title": "First Notes",
+  "status": "COMPLETED",
+  "notes": "These are the first notes of akshay.",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60b1d7f3ad5bd33ae0dc75f7"
+  },
+  "user": "nagendra0446",
+  "title": "Spring Boot",
+  "status": "COMPLETED",
+  "notes": "This is a Backend Java framework",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60b3596f697b7d0015b4b3e3"
+  },
+  "user": "guest",
+  "title": "What is an API?",
+  "status": "IN-PROGRESS",
+  "notes": "1. API's provide interaction between multiple applications with a simple confiation and in a secured way.",
+  "__v": 0
+}]
