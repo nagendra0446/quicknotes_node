@@ -4,7 +4,8 @@ const useragent = require('express-useragent');
 const mongoose = require('mongoose');
 const app_user = require('./models/app_user');
 const note = require('./models/note');
-const url = 'mongodb+srv://naguser:naguser123@nagcluster.8rb3w.mongodb.net/quicknotes_db?retryWrites=true&w=majority';
+const db_url = require('./configs/db_config');
+const url = db_url;
 
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true})
 
